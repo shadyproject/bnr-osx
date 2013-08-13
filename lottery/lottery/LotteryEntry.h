@@ -15,6 +15,7 @@
     int secondNumber;
 }
 
+-(id)initWithEntryDate:(NSDate*)aDate;
 -(void)setEntryDate:(NSDate*)date;
 -(NSDate*)entryDate;
 -(int)firstNumber;
