@@ -22,6 +22,10 @@
     return self;
 }
 
+-(id)init{
+    return [self initWithEntryDate:[NSDate date]];
+}
+
 -(void)setEntryDate:(NSDate *)date{
     entryDate = date;
 }
