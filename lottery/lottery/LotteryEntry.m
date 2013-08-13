@@ -30,4 +30,13 @@
 -(int)secondNumber{
     return secondNumber;
 }
+
+#pragma mark -
+#pragma mark Overrides
+-(NSString*)description{
+    NSDateFormatter* fmt = [[NSDateFormatter alloc] init];
+    [fmt setDateStyle:NSDateFormatterShortStyle];
+    return [NSString stringWithFormat:@"Entry for %@: %d %d",
+            [fmt stringFromDate:[self entryDate]], [self firstNumber], [self secondNumber]];
+}
 @end
