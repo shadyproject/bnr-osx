@@ -26,9 +26,7 @@ int main(int argc, const char * argv[])
             [weekComponents setWeek:i];
             
             NSDate* weeksFromNow = [cal dateByAddingComponents:weekComponents toDate:now options:0];
-            
-            LotteryEntry* entry = [[LotteryEntry alloc] init];
-            [entry setEntryDate:weeksFromNow];
+            LotteryEntry* entry = [[LotteryEntry alloc] initWithEntryDate:weeksFromNow];
             
             [array addObject:entry];
         }
